@@ -62,5 +62,11 @@
       <input name="bot-field" type="text" />
     </form>
     <div id="root"></div>
+   <script>
+  // Listen for any form submission across the entire website
+  document.addEventListener('submit', function() {
+    document.cookie = "has_ordered=true; path=/; max-age=31536000";
+  });
+</script>
   </body>
 </html>
