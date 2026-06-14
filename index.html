@@ -62,17 +62,5 @@
       <input name="bot-field" type="text" />
     </form>
     <div id="root"></div>
-  <script>
-  // This listens to the entire browser window at the highest level
-  window.addEventListener('click', function(event) {
-    // Check if the thing they clicked was a submit button
-    const isSubmitButton = event.target.type === 'submit' || event.target.closest('button[type="submit"]');
-    
-    if (isSubmitButton) {
-      // Drop the cookie instantly before the form scripts run
-      document.cookie = "has_ordered=true; path=/; max-age=31536000";
-    }
-  }, true); // The "true" makes it fire first before anything else on the page
-</script>
   </body>
 </html>
